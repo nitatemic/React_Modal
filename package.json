@@ -1,10 +1,11 @@
 {
   "name": "@nitatemic/reactmodal",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.4",
   "type": "module",
   "description": "React Modal",
   "author": "Nitatemic",
+    "homepage": "https://github.com/nitatemic/ReactModal",
   "license": "MIT",
   "funding": {
     "type": "ko-fi",
