@@ -32,14 +32,34 @@ const App = () => {
     const closeModal = () => {
         setModalOpen(false);
     };
+    /* If you want to close the modal when the user clicks outside of it, you can use the following code: */
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (event.target.classList.contains('modal-overlay')) {
+                closeModal();
+            }
+        };
 
+        if (modalOpen) {
+            document.addEventListener('click', handleOutsideClick);
+        }
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, [modalOpen]);
+
+    /* End of code to close the modal when the user clicks outside of it */
+    
     return (
         <div>
             <button onClick={openModal}>Open Modal</button>
-            <Modal isOpen={modalOpen} onClose={closeModal} displayCross>
-                <h2>Modal Content</h2>
-                <p>This is the content of the modal.</p>
-            </Modal>
+            {modalOpen && (
+                <Modal isOpen={modalOpen} onClose={closeModal} displayCross={true}>
+                    <h2 className="title-modal">Modal content</h2>
+                    <p className="content-modal">This is the content of the modal.</p>
+                </Modal>
+            )}
         </div>
     );
 };
