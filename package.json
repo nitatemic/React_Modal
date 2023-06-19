@@ -1,7 +1,7 @@
 {
   "name": "@nitatemic/reactmodal",
   "private": false,
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "description": "React Modal",
   "author": "Nitatemic",

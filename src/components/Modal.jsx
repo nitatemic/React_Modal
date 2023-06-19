@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../css/modal.css';
 
-export default function Modal({ isOpen, onClose, children }) {
+export default function Modal({ isOpen, onClose, displayCross, children }) {
     const [modalOpen, setModalOpen] = useState(isOpen);
 
     const closeModal = () => {
@@ -17,10 +17,11 @@ export default function Modal({ isOpen, onClose, children }) {
 
     return (
         <div className="modal-overlay">
-            <div className="modal-content">
-                <button className="modal-close" onClick={closeModal}>
+            <div className="modal-background">
+                {displayCross && (
+                <button className="modal-cross" onClick={closeModal}>
                     &times;
-                </button>
+                </button>)}
                 {children}
             </div>
         </div>

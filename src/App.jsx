@@ -33,10 +33,9 @@ const App = () => {
         <div>
             <button onClick={openModal}>Open modal</button>
             {modalOpen && (
-                <Modal isOpen={modalOpen} onClose={closeModal}>
+                <Modal isOpen={modalOpen} onClose={closeModal} displayCross={true}>
                     <h2 className="title-modal">Modal content</h2>
                     <p className="content-modal">This is the content of the modal.</p>
-                    <button onClick={closeModal}>Close</button>
                 </Modal>
             )}
         </div>
