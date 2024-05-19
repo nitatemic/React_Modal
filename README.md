@@ -1,4 +1,4 @@
-# @nitatemic/ReactModal
+# @nitatemic/reactmodal
 
 [![npm version](https://img.shields.io/npm/v/@nitatemic/reactmodal.svg)](https://www.npmjs.com/package/@nitatemic/reactmodal)
 
@@ -9,18 +9,18 @@ A simple modal component for React.
 You can install the package using npm or yarn:
 
 ```
-npm install @nitatemic/ReactModal
+npm install @nitatemic/reactmodal
 ```
 or
 ```
-yarn add @nitatemic/ReactModal
+yarn add @nitatemic/reactmodal
 ```
 
 ## Usage
 
 ```jsx
 import React, { useState } from 'react';
-import Modal from '@nitatemic/ReactModal';
+import Modal from '@nitatemic/reactmodal';
 
 const App = () => {
     const [modalOpen, setModalOpen] = useState(false);
